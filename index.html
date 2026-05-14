@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Comparison App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🌍 Weather Comparison</h1>
+            <p class="subtitle">Compare weather across different locations</p>
+        </header>
+
+        <div class="search-section">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Enter city name..." 
+                    class="search-input"
+                >
+                <button id="addBtn" class="add-btn">Add Location</button>
+            </div>
+            <div id="suggestions" class="suggestions"></div>
+        </div>
+
+        <div class="info-message" id="infoMessage">
+            Add up to 4 locations to compare their weather
+        </div>
+
+        <div id="weatherCardsContainer" class="weather-cards-container">
+            <!-- Weather cards will be added here dynamically -->
+        </div>
+
+        <div id="comparisonSection" class="comparison-section" style="display: none;">
+            <h2>📊 Weather Comparison</h2>
+            <div class="comparison-grid">
+                <div class="comparison-item">
+                    <span class="comparison-label">Temperature</span>
+                    <div id="tempComparison" class="comparison-chart"></div>
+                </div>
+                <div class="comparison-item">
+                    <span class="comparison-label">Humidity</span>
+                    <div id="humidityComparison" class="comparison-chart"></div>
+                </div>
+                <div class="comparison-item">
+                    <span class="comparison-label">Wind Speed</span>
+                    <div id="windComparison" class="comparison-chart"></div>
+                </div>
+                <div class="comparison-item">
+                    <span class="comparison-label">Feels Like</span>
+                    <div id="feelsLikeComparison" class="comparison-chart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
